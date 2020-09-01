@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NavigationControls.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <table style="width: 100%">
+            <tr style="height: 100px;text-align:center">
+                <td colspan="2">
+                    <h1>Welcome to website</h1>  
+                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+                        Orientation="Horizontal" BackColor="#FFFBD6" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                        Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                        ShowStartingNode="false"/>
+                </td>
+
+            </tr>
+            <tr style="height: 600px">
+                <td style="width: 220px">
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
+                </td>
+                <td>
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" 
+                        OnItemCreated="SiteMapPath1_ItemCreated" PathSeparator=">>"></asp:SiteMapPath>
+                    <asp:ContentPlaceHolder ID="Body" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr style="height: 100px; text-align: center">
+                <td colspan="2">
+                    <h1>Footer
+                    </h1>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

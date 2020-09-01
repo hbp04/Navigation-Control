@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="" title="rootpage"  description="">
+    <siteMapNode url="~/webForm1.aspx" title="Home"  description="This is Home Page" />
+    <siteMapNode url="~/webForm2.aspx" title="Employee"  description="">
+      <siteMapNode url="~/webForm4.aspx" title="Resume Add"  description="" />
+      <siteMapNode url="~/webForm5.aspx" title="Resume Change"  description="" />
+      <siteMapNode url="~/webForm6.aspx" title="Resume Delete"  description="" />
+    </siteMapNode>
+    <siteMapNode url="~/webForm3.aspx" title="Career"  description="" />
+  </siteMapNode>
+</siteMap>
